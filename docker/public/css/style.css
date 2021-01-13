@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #DCF2FE 0%, #6EC8FE 100%) 0% 0% no-repeat padding-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    text-align: center;
+    font: normal normal normal 60px/10px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    text-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.login-container {
+    background: #F3F3F3 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 76px;
+    width: 50%;
+
+}
+
+button {
+    background: #F3F3F3 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 31px;
+
+    width: 50%;
+    margin: 1em;
+
+    text-align: center;
+    font: normal normal normal 20px/10px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    height: 47px;
+}
+
+input {
+    text-align: center;
+    font: normal normal normal 30px/40px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    background-color: transparent;
+    margin: 1em;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.logo {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-device-width: 420px) {
+    .container{
+        flex-direction: column;
+    }
+
+    * {
+        font-size: 36px;
+    }
+
+    .login-container, .logo {
+        width: 100%;
+    }
+
+    form {
+        margin: auto;
+    }
+
+    img {
+        height: 7em;
+        margin: 2em;
+    }
+}
