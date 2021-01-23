@@ -6,7 +6,7 @@ class DefaultController extends AppController {
 
     public function index()
     {
-        $this->render('login_screen');
+        $this->render('login');
     }
 
     public function report()

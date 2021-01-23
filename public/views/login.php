@@ -13,11 +13,22 @@
         </div>
         <div class="container_and_logo">
             <div class="login-container">
-                <form>
-                    <input name="login" type="text" placeholder="login">
+                <form class = "login"  action="login" method="POST">
+                    <div class = "messages">
+                        <?php
+                            if(isset($messages))
+                            {
+                                foreach($messages as $message)
+                                {
+                                    echo $message;
+                                }
+                            }
+                        ?>
+                    </div>
+                    <input name="name" type="text" placeholder="login">
                     <input name="password" type="password" placeholder="hasło">
                     <input name="code" type="text" placeholder="kod logowania">
-                    <button>Zaloguj sie</button>
+                    <button type="submit">Zaloguj sie</button>
                     <input name="remember" type = "checkbox" id = "remlog" size="50px">
                     <label for="remlog">Zapamiętaj login</label>
                 </form>
@@ -27,7 +38,5 @@
     
             </div>
         </div>
-    </div>
-
     </div>
 </body>
