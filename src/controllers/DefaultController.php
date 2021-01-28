@@ -13,4 +13,9 @@ class DefaultController extends AppController {
     {
         $this->render('report');
     }
+
+    public function reportProgram()
+    {
+        $this->render('reportProgram');
+    }
 }

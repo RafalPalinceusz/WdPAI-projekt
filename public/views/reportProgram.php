@@ -27,14 +27,25 @@
             </ul>
         </div>
         <div class="intro">
-            Proszę podać typ i rodzaj awarii
+
         </div>
         <div class ="container_and_logo">
-        <section class="questions">
-            <button>Awaria Systemowa</button>
-            <button>Awaria Programu</button>
-            <button>Inne</button>
-        </section>
+            <div class="messages">
+                <form action="makeReport" method="POST" ENCTYPE="multipart/form-data">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+                    <input name="title" type="text" placeholder="title">
+                    <textarea name="message" rows=5 placeholder="message"></textarea>
+
+                    <input type="file" name="screenshot"/><br/>
+                    <button type="submit">send</button>
+                </form>
+            </div>
         <div class="logo">
             <img src="public/images/logodifferent.png" height="600 px" width="400px">
 

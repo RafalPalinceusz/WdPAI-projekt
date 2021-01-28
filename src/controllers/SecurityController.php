@@ -34,7 +34,8 @@ class SecurityController extends AppController
            return $this->render('login', ['messages' => ['błędne kod dostępu']]);
        }
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/report");
+#        $url = "http://$_SERVER[HTTP_HOST]";
+#        header("Location: {$url}/report");
+        return $this->render('report');
     }
 }
