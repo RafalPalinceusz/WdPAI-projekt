@@ -22,16 +22,16 @@ class ReportController extends AppController {
 
             $reports = new reports($_POST['title'], $_POST['message'], $_FILES['screenshot']['name']);
 
-            return $this->render('report', ['messages' => $this ->message]);
+            #return $this->render('report', ['messages' => $this->message]);
         }
-         return $this->render('reportProgram', ['messages' => $this ->message]);
+         return $this->render('reportProgram', ['messages' => $this->message]);
     }
 
     private function checkImg(array $file): bool
     {
         if($file['size'] > self::MAX_FILE_SIZE)
         {
-            $this ->message[] = 'Zdjecie jest zbyt duże do wgrania';
+            $this->message[] = 'Zdjecie jest zbyt duże do wgrania';
         }
 
         if(!isset($file['type']) || !in_array($file['type'], self::SUPPORTED_TYPES))

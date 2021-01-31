@@ -32,7 +32,7 @@
         <div class ="container_and_logo">
         <section class="questions">
             <button>Awaria Systemowa</button>
-            <button>Awaria Programu</button>
+            <button onclick="location.href='/report/reportProgram';"> Awaria Programu </button>
             <button>Inne</button>
         </section>
         <div class="logo">

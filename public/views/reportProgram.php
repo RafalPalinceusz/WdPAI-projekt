@@ -46,10 +46,10 @@
                     <button type="submit">send</button>
                 </form>
             </div>
-        <div class="logo">
-            <img src="public/images/logodifferent.png" height="600 px" width="400px">
+            <div class="logo">
+                <img src="public/images/logodifferent.png" height="600 px" width="400px">
 
-        </div> 
-    </div> 
+            </div>
+        </div>
     </div>
 </body>

@@ -2,12 +2,13 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/user.php';
+require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
     public function login()
     {
-        $user = new user('jantest', 'abc123','123456');
+        $userRepository = new UserRepository();
 
         if(!$this->isPost())
         {
@@ -15,11 +16,14 @@ class SecurityController extends AppController
 
         }
 
-       $name = $_POST["name"];
-       $password = $_POST["password"];
-       $code = $_POST["code"];
+        $name = $_POST["name"];
+        $password = $_POST["password"];
+        $code = $_POST["code"];
 
-       if ($user->getName() !== $name)
+        $user = $userRepository->getuser(($name));
+
+
+       if (!$user)
        {
            return $this->render('login', ['messages' => ['taki użytkownik nie istnieje']]);
        }
