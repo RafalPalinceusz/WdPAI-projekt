@@ -22,15 +22,15 @@ class Database
     {
         try
         {
-            $connect = new PDO(
+            $connecting = new PDO(
                 "pgsql:host=$this->host;port=5432;dbname=$this->database",
                 $this->username,
                 $this->password,
                 ["sslmode" => "prefer"]
             );
 
-            $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $connect;
+            $connecting->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $connecting;
 
         }
         catch(PDOException $e)

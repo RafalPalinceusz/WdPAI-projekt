@@ -20,33 +20,14 @@ class user
         return $this->name;
     }
 
-    public function setName(string $name)
-    {
-        $this->login = $name;
-    }
 
     public function getPassword(): string
     {
         return $this->password;
     }
 
-
-    public function setPassword(string $password)
-    {
-        $this->password = $password;
-    }
-
-
     public function getCode(): string
     {
         return $this->code;
     }
-
-
-    public function setCode(string $code)
-    {
-        $this->code = $code;
-    }
-
-
 }

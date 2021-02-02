@@ -3,7 +3,7 @@
     <link rel= "stylesheet" type="text/css" href="public/css/style.css">
     <link rel= "stylesheet" type="text/css" href="public/css/style-report.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <title>Zgłaszanie problemów</title>
+    <title>Zgłaszanie programów</title>
 </head>
 
 <body>
