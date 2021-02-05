@@ -18,4 +18,9 @@ class DefaultController extends AppController {
     {
         $this->render('reportProgram');
     }
+
+    public function sentReports()
+    {
+        $this->render('sentReports');
+    }
 }
